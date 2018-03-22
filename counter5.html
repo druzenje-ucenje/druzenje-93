@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Counter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script>
+
+        var counter = 0;
+
+        // ono sto radi f-ja
+        function count() {
+            counter++;
+            document.querySelector('#heading').innerHTML = counter;
+
+            if (counter % 10 === 0) {
+                // alert(`Counter is at ${counter}`);  ES6
+                alert('Counter is at ' + counter);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="heading">0</h1>
+    <button onclick="count()">Click here!</button>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Counter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // dohvatamo dugme
+            var dugme = document.querySelector('button');
+            // dohvatamo heading
+            var heading = document.querySelector('#counter');
+            // dohvatimo tekst
+            var tekst = document.querySelector('#tekst');
+
+            var counter = 0;
+
+            // kacimo event listener
+            dugme.addEventListener('click', function () {
+                counter++;
+                //
+                heading.innerHTML = counter;
+                heading.style.color = 'green';
+                tekst.innerHTML = 'Pa ovo radi!!!';
+
+                if (counter % 2 === 0) {
+                    alert(`Counter is at ${counter}`)
+                }
+            }); // kraj dugme listener
+        });
+
+        // var counter = 0;
+
+        // function count() {
+        //     counter++;
+        //     document.querySelector('#counter').innerHTML = counter;
+
+        //     if (counter % 10 === 0) {
+        //         alert(`Counter is at ${counter}`)
+        //     }
+        // }
+    </script>
+</head>
+<body>
+    <h1 id="counter">0</h1>
+    <p id="tekst"></p>
+    <button>Click here!</button>
+</body>
+</html>

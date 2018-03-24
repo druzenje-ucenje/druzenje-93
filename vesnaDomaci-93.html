@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Domaci-93</title>
+    </head>
+    <body>
+        
+        <h1>Hello!</h1>
+
+        <button id="red">Red</button>
+        <button id=green"">Green</button>
+        <button id="blue">Blue</button>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+
+                var redButt = document.querySelector('#red');
+                var greenButt = document.querySelector('#green');
+                var blueButt = document.getElementById('blue');
+
+                var heading = document.getElementsByTagName('h1');
+
+                redButt.addEventListener('click', function() {
+                    heading.style.color = 'red';
+
+                    redButt.innerHTML = 'Red!';
+                    redButt.style.color = 'red';
+                });
+
+                greenButt.addEventListener('click', function() {
+                    heading.style.color = 'green';
+
+                    greenButt.innerHTML = 'Green!';
+                    greenButt.style.color = 'green';
+                });
+
+                blueButt.addEventListener('click', function() {
+                    heading.style.color = 'blue';
+
+                    blueButt.innerHTML = 'Blue!';
+                    blueButt.style.color = 'blue';
+                });
+            });
+
+        // .............2....................
+        //  ili, umesto svega ovog (menja se boja headinga ali se ne menja boja i sadrzaj dugmica)
+        // sledece:
+            
+            // document.getElementById('red').onclick = function() {
+            //          document.querySelector('h1').style.color = 'red';
+            // };
+
+            // document.querySelector('#green').onclick = function() {
+            //     document.querySelector('h1').style.color = 'green';
+            // };
+
+            // document.querySelector('#blue').onclick = function () {
+            //     document.querySelector('h1').style.color = 'blue';
+            // }; 
+
+           
+
+        
+        </script>
+    </body>
+</html>

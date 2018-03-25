@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #text{
+            width: 50px;
+            height: 50px;
+            padding: 0 10px 10px 15px;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="text"></div>
+    <button value="red" id="red">Red</button>
+    <button value="green" id="green">Green</button>
+    <button value="blue" id="blue">Blue</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+        var red = document.getElementById('red');
+            red.addEventListener('click', function(){
+            var text = document.getElementById('text');
+            text.innerHTML = "<h1>Hello</h1>";
+            text.style.color = 'red';
+            red.innerHTML = "red!"
+            blue.innerHTML = "blue"
+            green.innerHTML = "green"
+        });
+
+        var green = document.getElementById('green');
+            green.addEventListener('click', function(){
+            var text = document.getElementById('text');
+            text.innerHTML = "<h1>Hello</h1>";
+            text.style.color = 'green';
+            green.innerHTML = "green!"
+            blue.innerHTML = "blue"
+            red.innerHTML = "red"
+        });
+
+        var blue = document.getElementById('blue');
+            blue.addEventListener('click', function(){
+            var text = document.getElementById('text');
+            text.innerHTML = "<h1>Hello</h1>";
+            text.style.color = 'blue';
+            blue.innerHTML = "blue!"
+            green.innerHTML = "green"
+            red.innerHTML = "red"
+
+        });
+        });
+    </script>
+</body>
+</html>

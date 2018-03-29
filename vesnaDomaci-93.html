@@ -10,7 +10,7 @@
         <h1>Hello!</h1>
 
         <button id="red">Red</button>
-        <button id=green"">Green</button>
+        <button id="green">Green</button>
         <button id="blue">Blue</button>
 
         <script>
@@ -20,13 +20,17 @@
                 var greenButt = document.querySelector('#green');
                 var blueButt = document.getElementById('blue');
 
-                var heading = document.getElementsByTagName('h1');
+                var heading = document.querySelector('h1');
 
                 redButt.addEventListener('click', function() {
                     heading.style.color = 'red';
 
                     redButt.innerHTML = 'Red!';
                     redButt.style.color = 'red';
+                    greenButt.style.color = 'black';
+                    greenButt.innerHTML = 'Green';
+                    blueButt.style.color = 'black';
+                    blueButt.innerHTML = 'Blue';
                 });
 
                 greenButt.addEventListener('click', function() {
@@ -34,6 +38,10 @@
 
                     greenButt.innerHTML = 'Green!';
                     greenButt.style.color = 'green';
+                    redButt.innerHTML = 'Red';
+                    redButt.style.color = 'black';
+                    blueButt.style.color = 'black';
+                    blueButt.innerHTML = 'Blue';
                 });
 
                 blueButt.addEventListener('click', function() {
@@ -41,13 +49,18 @@
 
                     blueButt.innerHTML = 'Blue!';
                     blueButt.style.color = 'blue';
+                    redButt.innerHTML = 'Red';
+                    redButt.style.color = 'black';
+                    greenButt.style.color = 'black';
+                    greenButt.innerHTML = 'Green';
                 });
             });
 
         // .............2....................
         //  ili, umesto svega ovog (menja se boja headinga ali se ne menja boja i sadrzaj dugmica)
         // sledece:
-            
+            // document.addEventListener('DOMContentLoaded', function() {
+
             // document.getElementById('red').onclick = function() {
             //          document.querySelector('h1').style.color = 'red';
             // };
@@ -58,7 +71,8 @@
 
             // document.querySelector('#blue').onclick = function () {
             //     document.querySelector('h1').style.color = 'blue';
-            // }; 
+            // };
+            // }); 
 
            
 

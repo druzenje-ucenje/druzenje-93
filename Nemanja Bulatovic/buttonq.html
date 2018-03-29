@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+   <div id="text"></div> 
+   <button id="red">red</button>
+   <button id="green">green</button>
+   <button id="blue">blue</button>
+   <script>
+    $(document).ready(function(){
+        $('#red').on('click', function(){
+            $('#text').html('<h1>Hello</h1>').css({
+                width: "50px",
+                height: "50px",
+                padding: "0 10px 10px 15px",
+                fontSize: "24px",
+                color: "red"
+            });
+            $('#red').text('red!');
+            $('#green').text('green');
+            $('#blue').text('blue');
+        });
+
+         $('#green').on('click', function(){
+            $('#text').html('<h1>Hello</h1>').css({
+                width: "50px",
+                height: "50px",
+                padding: "0 10px 10px 15px",
+                fontSize: "24px",
+                color: "green"
+            });
+            $('#green').text('green!');
+            $('#red').text('red');
+            $('#blue').text('blue');
+        });
+
+         $('#blue').on('click', function(){
+            $('#text').html('<h1>Hello</h1>').css({
+                width: "50px",
+                height: "50px",
+                padding: "0 10px 10px 15px",
+                fontSize: "24px",
+                color: "blue"
+            });
+            $('#blue').text('blue!');
+            $('#red').text('red');
+            $('#green').text('green');
+        });
+    });
+
+
+   </script>
+</body>
+</html>
